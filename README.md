@@ -12,6 +12,5 @@ Following files, directories and their contents are copyright @JeOam. You may no
 All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
 
-------
 Special acknowledgement to [Rogchap](http://rogchap.com/), this repository was develope    d based on [his repository](https://github.com/rogchap/rogchap.github.com) 
-------
+
