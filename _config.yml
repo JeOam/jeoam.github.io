@@ -1,1 +1,3 @@
-baseurl: /jeoam.github.io
+safe: true
+lsi: false
+pygments: true
