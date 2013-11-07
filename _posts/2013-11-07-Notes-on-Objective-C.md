@@ -1,10 +1,12 @@
+---
 layout: post
 title: Notes on Objective-C
-### Notes on Objective-C, from Programming in Objective-C, Fifth Edition
+---
+Notes on Objective-C, from Programming in Objective-C, Fifth Edition
 
 
 
-### Hello World Program
+Hello World Program
 
 #import <Foundation/Foundation.h>
 int main(int argc, const char * argv[])
@@ -18,7 +20,7 @@ int main(int argc, const char * argv[])
 
 
 
-# Basic Data Types(4.1)
+Basic Data Types(4.1)
 Type                      Constant Examples                    NSLog chars
 char                      'a','\n'                             %c
 short int                 -                                    %hi, %hx, %ho
@@ -35,7 +37,7 @@ id                        nil                                  %p
 
 
 
-### Methods for Working with Dynameic Types(9.1)
+Methods for Working with Dynameic Types(9.1)
 Method                                                                     Quesstion or Action
 -(BOOL) isKindofClass: class-object                                        Is the object a member of class-object or a descendant?
 -(BOOL) isMemberofClass: class-object                                      Is the object a member of class-object?
@@ -48,7 +50,7 @@ Method                                                                     Quess
 
 
 
-### Exception Handling(P412)
+Exception Handling(P412)
 @try{
 	//some codes
 }
@@ -58,7 +60,7 @@ Method                                                                     Quess
 
 
 
-### NSArray class's six initialization methods
+NSArray class's six initialization methods
 initWithArray"
 initWithArray:copyItems:
 initWithContentsofFile:
@@ -75,7 +77,7 @@ thisMonth = february;
 
 
 
-### Conditional Compliation
+Conditional Compliation
 #ifdef conditon
     #define A  B
 #else
@@ -86,10 +88,10 @@ thisMonth = february;
 
 
 
-### compoud literal
+compoud literal
 (struct date){ .month=7, .day=2, year=2011}
 
 
 
-### NSNumber Creation and Retrieval Methods
+NSNumber Creation and Retrieval Methods
 
