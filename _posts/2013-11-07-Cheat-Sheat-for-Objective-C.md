@@ -57,4 +57,4 @@ Cheat Sheat on Objective-C, from [Programming in Objective-C, Fifth Edition](htt
 
 
 #Common NSMutableString Methods(15.3):
-{% gist %}
+{% gist 7369048 %}
