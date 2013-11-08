@@ -47,3 +47,14 @@ Cheat Sheat on Objective-C, from [Programming in Objective-C, Fifth Edition](htt
 
 
 #NSNumber Creation and Retrieval Methods(15.1)
+{% gist 7349764 %}
+
+
+
+#Common NSString Methods:(15.2):
+{% gist 7368507%}
+
+
+
+#Common NSMutableString Methods(15.3):
+{% gist %}
