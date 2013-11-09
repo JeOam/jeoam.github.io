@@ -58,3 +58,18 @@ Cheat Sheat on Objective-C, from [Programming in Objective-C, Fifth Edition](htt
 
 #Common NSMutableString Methods(15.3):
 {% gist 7369048 %}
+
+
+
+#Common NSArray Methods(15.4):
+{% gist 7380742 %}
+
+
+
+#Common NSMutableArray Methods(15.5):
+{% gist 7387805 %}
+
+
+
+#Some NSValue Wrapper and Unwrapper Methods(15.6):
+{% gist 7388053 %}
