@@ -98,3 +98,8 @@ Cheat Sheat on Objective-C, from [Programming in Objective-C, Fifth Edition](htt
 
 #Some NSIndexSet Methods(15.11):
 {% gist 7395202 %}
+
+
+
+#Common NSFileManager File Methods(16.1):
+{% gist 7395378 %}
