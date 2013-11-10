@@ -73,3 +73,28 @@ Cheat Sheat on Objective-C, from [Programming in Objective-C, Fifth Edition](htt
 
 #Some NSValue Wrapper and Unwrapper Methods(15.6):
 {% gist 7388053 %}
+
+
+
+#Common NSDictionary Methods(15.7):
+{% gist 7388731 %}
+
+
+
+#Common NSMutableDictionary Methods(15.8):
+{% gist 7394622 %}
+
+
+
+#Common NSSet Methods(15.9):
+{% gist 7394799 %}
+
+
+
+#Common NSMutableSet Methods(15.10):
+{% gist 7394860 %}
+
+
+
+#Some NSIndexSet Methods(15.11):
+{% gist 7395202 %}
