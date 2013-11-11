@@ -104,3 +104,7 @@ Cheat Sheat on Objective-C, from [Programming in Objective-C, Fifth Edition](htt
 #Common NSFileManager File Methods(16.1):
 {% gist 7395378 %}
 
+
+
+#Common NSFileManager Directory Methods(16.2):
+{% gist 7407123%}
