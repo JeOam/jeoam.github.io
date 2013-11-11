@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cheat Sheat for Objective-C
+title: Cheat Sheats for Objective-C
 ---
 Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](http://book.douban.com/subject/11622649/)
 
