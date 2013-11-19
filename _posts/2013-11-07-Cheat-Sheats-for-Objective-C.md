@@ -108,3 +108,8 @@ Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](ht
 
 #Common NSFileManager Directory Methods(16.2):
 {% gist 7407123%}
+
+
+
+#Enumerating the Contents of a Directory(Program 16.4)
+{% gist 7539586 %}
