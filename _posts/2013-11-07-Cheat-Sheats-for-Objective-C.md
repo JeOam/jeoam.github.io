@@ -113,3 +113,8 @@ Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](ht
 
 #Enumerating the Contents of a Directory(Program 16.4)
 {% gist 7539586 %}
+
+
+
+###Common Path Utility Methods(16.3)
+{% gist 7642346 %}
