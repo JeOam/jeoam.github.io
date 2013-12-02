@@ -226,7 +226,7 @@ namespace Mobile.Web.Control
 
 14.来自@[Lateral](http://stackoverflow.com/a/185308/769424), 得票数：637
 
-```shell
+```bash
 return 1; #returns 1
 ```
 
