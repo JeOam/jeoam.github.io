@@ -21,7 +21,7 @@ title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎�
 * never gonna say goodbye. Never gonna tell a lie and hurt you.
 */ 
 ```
-** (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词) **  
+ (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词) **  
 我很抱歉！！我实在忍不住不这么做啊...！！  
 另外，还有一个，不过我并没有把它放出来，尽管我很想！！它存在于我写的一些不那么直观的类里面：  
   
@@ -61,7 +61,7 @@ throw up;  //哈哈哈哈
 stop(); // Hammertime!   
 ```  
   
-** (译者注：这里的代码和注释其实连起来是一句[很有名的歌](http://www.xiami.com/song/play?ids=/song/playlist/id/1598992/object_name/default/object_id/0)里面的歌词) **  
+(译者注：这里的代码和注释其实连起来是一句[很有名的歌](http://www.xiami.com/song/play?ids=/song/playlist/id/1598992/object_name/default/object_id/0)里面的歌词)   
   
 --- 
   
