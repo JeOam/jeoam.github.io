@@ -10,7 +10,7 @@ title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎�
 1.来自@[Jens Roland](http://stackoverflow.com/a/482129/769424)，得票数：1468 
 
 对于注释，我总是感到愧疚，因为我总喜欢把非建设性的评论、代码诗和一些小笑话放到我自己的大部分项目中（尽管我自己认为会有足够的感知，能在代码发出去前删除掉明显冒犯性的内容）。这里是一个我自己特别喜欢的，放在很隐秘的地方且设计槽糕的"上帝对象"（God Object）：
-
+  
 ```c
 /*
 * 至那些勇敢地探索到此处的伟大灵魂：
@@ -19,61 +19,61 @@ title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎�
 * never gonna give you up, never gonna let you down,
 * never gonna run around and desert you. Never gonna make you cry,
 * never gonna say goodbye. Never gonna tell a lie and hurt you.
+* (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词)
 */ 
 ```
-
-(译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词)  
-我很抱歉！！我实在忍不住不这么做啊...！！
-另外，还有一个，不过我并没有把它放出来，尽管我很想！！它存在于我写的一些不那么直观的类里面：
-
+  
+我很抱歉！！我实在忍不住不这么做啊...！！  
+另外，还有一个，不过我并没有把它放出来，尽管我很想！！它存在于我写的一些不那么直观的类里面：  
+  
 ```c
 // 
-// 亲爱的维护者：
-// 当你优化完这个程序时，你会明白你所做的优化是一个多么大的错误；
-// 请自觉在下面的累加器上留下记录，以提醒后来者：
-//
-//     total_hours_wasted_here = 42
-// 
+// 亲爱的维护者：  
+// 当你优化完这个程序时，你会明白你所做的优化是一个多么大的错误；  
+// 请自觉在下面的累加器上留下记录，以提醒后来者：  
+//  
+//     total_hours_wasted_here = 42  
+//   
 ```
-
+  
 ---
-
-2.来自@[benmatth](http://stackoverflow.com/a/549611/769424)，得票数：1058
-
+  
+2.来自@[benmatth](http://stackoverflow.com/a/549611/769424)，得票数：1058  
+  
 ```c
-Exception up = new Exception("真的出问题了！");
-throw up;  //哈哈哈哈
-```
-
+Exception up = new Exception("真的出问题了！");  
+throw up;  //哈哈哈哈  
+``` 
+  
 ---
-
-3.来自@[johnc](http://stackoverflow.com/a/316233/769424)，得票数：1055
-
-```c
-//当我写下这些的时候，只有上帝和我知道我在做什么。
-//现在，只有剩下上帝知道了。
-```
-
----
-
-4.来自@[Tuoski](http://stackoverflow.com/a/186309/769424)，得票数：1052
-
-```c
-stop(); // Hammertime!  
-```
-
-(译者注：这里的代码和注释其实连起来是一句[很有名的歌](http://www.xiami.com/song/play?ids=/song/playlist/id/1598992/object_name/default/object_id/0)里面的歌词)
-
----
-
-5.来自@[Ash](http://stackoverflow.com/a/740603/769424)，得票数：1034
-
-这是为了防止某些笨蛋把我的代码混乱....
-
-```c
-// 这是自动生成的，请不要改变它。所有的改变将会被还原。
-```
-
+  
+3.来自@[johnc](http://stackoverflow.com/a/316233/769424)，得票数：1055  
+  
+```c  
+//当我写下这些的时候，只有上帝和我知道我在做什么。  
+//现在，只有剩下上帝知道了。  
+```  
+  
+---  
+  
+4.来自@[Tuoski](http://stackoverflow.com/a/186309/769424)，得票数：1052  
+  
+```c  
+stop(); // Hammertime!   
+```  
+  
+(译者注：这里的代码和注释其实连起来是一句[很有名的歌](http://www.xiami.com/song/play?ids=/song/playlist/id/1598992/object_name/default/object_id/0)里面的歌词)  
+  
+--- 
+  
+5.来自@[Ash](http://stackoverflow.com/a/740603/769424)，得票数：1034  
+  
+这是为了防止某些笨蛋把我的代码混乱....  
+  
+```c  
+// 这是自动生成的，请不要改变它。所有的改变将会被还原。  
+```  
+  
 ---
 
 6.来自@[Sergey Kornilov](http://stackoverflow.com/a/185803/769424)，得票数：949
