@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Hello World
+title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎样的？
 ---
 
-译者注：这是一个来自 [Stackverflow](http://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered?page=2&tab=votes#tab-top) 上的问题，问题由于不符合 Stackoverflow 的社区规则，现在已经被关闭了; 之前也有别人翻译过，可是现在能搜到的翻译要不零散，要么翻译得不准确，我们特意选取了二十个来翻译，一起看看其中汇集了各式各样好玩的注释！
+译者注：这是一个来自 [Stackverflow](http://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered?page=2&tab=votes#tab-top) 上的问题，问题由于不符合 Stackoverflow 的社区规则，现在已经被关闭了; 之前也有别人翻译过，可是现在能搜到的翻译要不零散，要么翻译得不准确，这里特意选取了二十个来翻译，一起看看其中汇集了各式各样好玩的注释！
 
 ------
 
@@ -18,6 +18,7 @@ title: Hello World
 > * never gonna say goodbye. Never gonna tell a lie and hurt you.
 > * (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词)
 > */ 
+> 
 
 我很抱歉！！我实在忍不住不这么做啊...！！
 另外，还有一个，不过我并没有把它放出来，尽管我很想！！它存在于我写的一些不那么直观的类里面：
@@ -101,7 +102,7 @@ title: Hello World
 >                 BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 >             if (m != null)
 >             {
- >                throw new RichardIsAFuckingIdiotException("No!! Don't use the fucking BindCompany method!!!");
+>                throw new RichardIsAFuckingIdiotException("No!! Don't use the fucking BindCompany method!!!");
 >             }
 >             // P.S. 这个方法只是一个玩笑， ... 下面那些就是来真的了。
 >         }
@@ -238,4 +239,5 @@ title: Hello World
 ---
 
 本文由 [JeOam](http://jeoam.github.io) 翻译；
-首发于 [SegmentFault](http://segmentfault.com/) 社区。
+
+首发于 [SegmentFault](http://segmentfault.com/a/1190000000345897) 社区。
