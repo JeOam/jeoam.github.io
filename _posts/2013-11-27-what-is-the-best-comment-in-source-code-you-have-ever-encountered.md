@@ -16,7 +16,7 @@ title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎�
 > * never gonna give you up, never gonna let you down,
 > * never gonna run around and desert you. Never gonna make you cry,
 > * never gonna say goodbye. Never gonna tell a lie and hurt you.
-> * (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词)
+> * (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词) 
 > */ 
 > 
 
