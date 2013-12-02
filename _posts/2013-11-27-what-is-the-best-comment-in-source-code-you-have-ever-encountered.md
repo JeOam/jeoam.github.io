@@ -10,6 +10,7 @@ title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎�
 1.来自@[Jens Roland](http://stackoverflow.com/a/482129/769424)，得票数：1468 
 
 对于注释，我总是感到愧疚，因为我总喜欢把非建设性的评论、代码诗和一些小笑话放到我自己的大部分项目中（尽管我自己认为会有足够的感知，能在代码发出去前删除掉明显冒犯性的内容）。这里是一个我自己特别喜欢的，放在很隐秘的地方且设计槽糕的"上帝对象"（God Object）：
+<<<<<<< HEAD
 ```c
 /**
 * 至那些勇敢地探索到此处的伟大灵魂：
@@ -21,6 +22,18 @@ title: 经典问题：你看源代码时，碰到过的"最好"的注释是怎�
 * (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词)
 */ 
 ```
+=======
+> /**
+> * 至那些勇敢地探索到此处的伟大灵魂：
+> * 你就是那个冥冥中被选中的那个人，那个不懈地斟酌修改我们那些极其糟糕的代码的人，像是一个在编程世界里英勇的厮杀的骑士！
+> * 对你，对你这个真正的救世主，对你这个人类的王者，我郑重的说：
+> * never gonna give you up, never gonna let you down,
+> * never gonna run around and desert you. Never gonna make you cry,
+> * never gonna say goodbye. Never gonna tell a lie and hurt you.
+> * (译者注：上面三句不翻译，其实是因为那是[一首歌](http://www.xiami.com/song/play?ids=/song/playlist/id/3431922/object_name/default/object_id/0)的歌词) 
+> */ 
+> 
+>>>>>>> 2a19208b85280031925f7fa96b5681fb14717d7c
 
 我很抱歉！！我实在忍不住不这么做啊...！！
 另外，还有一个，不过我并没有把它放出来，尽管我很想！！它存在于我写的一些不那么直观的类里面：
