@@ -1,3 +1,8 @@
+---
+layout: post
+title: Hello World
+---
+
 译者注：这是一个来自 [Stackverflow](http://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered?page=2&tab=votes#tab-top) 上的问题，问题由于不符合 Stackoverflow 的社区规则，现在已经被关闭了; 之前也有别人翻译过，可是现在能搜到的翻译要不零散，要么翻译得不准确，我们特意选取了二十个来翻译，一起看看其中汇集了各式各样好玩的注释！
 
 ------
