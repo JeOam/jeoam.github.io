@@ -118,3 +118,13 @@ Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](ht
 
 ###Common Path Utility Methods(16.3)
 {% gist 7642346 %}
+
+
+
+###Common Path Utility Functions(16.4)
+{% gist 8039702 %}
+
+
+
+###Common iOS Directories(16.5)
+{% gist 8042340 %}
