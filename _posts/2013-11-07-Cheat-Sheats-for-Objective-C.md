@@ -128,3 +128,7 @@ Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](ht
 
 ###Common iOS Directories(16.5)
 {% gist 8042340 %}
+
+
+###NSProcessInfo Methods（16.6）
+{ % gist 8079592 % }
