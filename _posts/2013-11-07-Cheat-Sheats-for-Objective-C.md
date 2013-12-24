@@ -133,3 +133,8 @@ Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](ht
 
 ###NSProcessInfo Methods（16.6）
 {% gist 8079592 %}
+
+---
+
+###Common NSFileHandle Methods(16.7)
+{% gist 8115449 %}
