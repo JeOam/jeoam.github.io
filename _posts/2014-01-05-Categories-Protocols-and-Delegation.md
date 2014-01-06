@@ -1,3 +1,8 @@
+---
+layout: post
+title: Categories, Protocols and Delegation
+---
+
 ###Categories and Class Extensions
 ```
 @interface Fraction (MathOps)
