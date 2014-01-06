@@ -139,5 +139,7 @@ Cheat Sheats on Objective-C, from [Programming in Objective-C, Fifth Edition](ht
 ###Common NSFileHandle Methods(16.7)
 {% gist 8115449 %}
 
-###Memory Management and Automatic Reference Counting()
+---
+
+###Memory Management and Automatic Reference Counting(17)
 {% gist 8253047 %}
