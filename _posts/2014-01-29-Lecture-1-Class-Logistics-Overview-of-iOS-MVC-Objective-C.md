@@ -1,11 +1,14 @@
 ---
 layout: post
-title:  斯坦福 iOS7 公开课：1. Class Logistics, Overview of iOS, MVC, Objective-C
+title:  斯坦福 iOS7 公开课第一课：Class Logistics, Overview of iOS, MVC, Objective-C
 ---
 
-> 这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，由 [JeOam](http://jeoam.github.io/) 按照视频字幕手工编辑完成。
+这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。
 
-###1. Class Logistics, Overview of iOS, MVC, Objective-C
+###Class Logistics, Overview of iOS, MVC, Objective-C
+
+---
+
 Welcome to Stanford CS193P fall of 2013-14, We are going to be covering developing applications for iOS, so specifically iOS7. iOS is really cool platform for building apps. 
 
 #####What will I learn in this course?
@@ -20,7 +23,9 @@ Welcome to Stanford CS193P fall of 2013-14, We are going to be covering developi
   * Application of MVC design model
   * Many computer science concepts applied in a commercial development platform: Databases, Graphics, Multimedia, Multithreading, Animation, Networking, and much, much more! 
   * Numerous students have gone on to sell products on the AppStore
-  
+
+---
+
 #####Prerequisites
 The prerequisites for this class are super duper important.    
 
@@ -44,6 +49,8 @@ This is an upper-level CS course. If you have never written a program where you 
 
 iOS7 is completely object-oriented. The whole structure, the design of the thing, is object-oriented.
 
+---
+
 #####Assignments
 
 * Weekly Homework
@@ -60,6 +67,8 @@ All of the homework assignments have detailed write-up of the required task and 
 I'm a big believer in a teaching methodology, which is I'm going to tell you about a concept, via slides, and then I'm going to show you it by demoing it to you, actually writing an application that does, then I'm going to ask you to do it on the homework.
 
 So that's three times you're going to see every single thing pretty much in this class. By the end of that, you're going to know how to do it.
+
+---
 
 #####What’s in iOS?
 This is just a high-level overview
@@ -92,6 +101,7 @@ This is just a high-level overview
    * Cocoa Touch is where we're going to spend most of our time. This is where you are going to be building buttons and sliders and text fields, talking to each other, and animation happening, things sliding in and out, and, you know, fading out and fading in. If you want to get a picture from the camera, from the user, you can do that. Things like localization so that you're app can run in many countries in the world and up your sales by doing that. A whole map kit for doing all the 3D maps that you've probably seen in iOS7 and all that stuff is all in there. And there's even a view in there that's an entire web brower in a little rectangle that you can just plop right into your app. So these are really high-level objects, and we're going 
  to really be diving into this layer. So this is really the primary. And it's called Cocoa Touch because the API in here was originally developed for Mac OS X, and it was called Cocoa, and of course then when they went to iOS, they adapted, and a lot of API is shared between the two platforms. In fact, if you develop an iOS app and then you say someday, oh, I want to develop an app for the Mac using Cocoa, it's going to be very similar. So Cocoa Touch, obviously, is the touchscreen version of Cocoa. 
 
+---
 
 #####Platform Components
 1. Tools
@@ -111,4 +121,7 @@ This is just a high-level overview
    * MVC is essentially a strategy for how to organize all the classes in your application. And what we do fundamentally is we divide all the classes into one of there camps:
 
 ![images-MVC](https://raw.github.com/JeOam/jeoam.github.io/master/images/MVC.png)
+
+更新中....
+---
 
