@@ -5,6 +5,8 @@ title:  斯坦福 iOS7 公开课第一课：Class Logistics, Overview of iOS, MV
 
 这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。
 
+想要看到文章更好的排版效果，可直接浏览 GitHub 里的[文件](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-01-29-Lecture-1-Class-Logistics-Overview-of-iOS-MVC-Objective-C.md)。深受 md 格式解析不统一的害！！
+
 ---
 
 Welcome to Stanford CS193P fall of 2013-14, We are going to be covering developing applications for iOS, so specifically iOS7. iOS is really cool platform for building apps. 
