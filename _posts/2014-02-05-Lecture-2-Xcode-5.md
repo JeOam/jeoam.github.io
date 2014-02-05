@@ -75,7 +75,29 @@ If you remember from the last time, we did the card thing, it was a very simple 
 ![Lecture-2-Code-Demo](https://raw2.github.com/JeOam/jeoam.github.io/master/images/Lecture-2-Code-Demo_Page_42.jpg)
 ![Lecture-2-Code-Demo](https://raw2.github.com/JeOam/jeoam.github.io/master/images/Lecture-2-Code-Demo_Page_43.jpg)
 
-#####Okay, so that's it for the slides.
+Okay, so that's it for the slides.
+
+---
+
+###Let's start building a Card Game out of these classes.
+The following slides are a walkthrough of the demonstration done in class. You will need this walkthrough to do your first homework assignment.
+
+This is the [Slides](https://github.com/JeOam/jeoam.github.io/blob/master/images/Lecture-2-Slides-Demonstration-of-Xcode5.pdf?raw=true).
+
+---
+
+###Coming Up
+#####Needs more Card Game!
+
+* Your homework will be to have that single card flip through an entire Deck of PlayingCards.
+* Next week we’ll make multiple cards and put in logic to match them against each other.
+
+#####Also next week ...
+
+* Objective-C language in depth
+* Foundation classes: arrays, dictionaries, strings, etc.
+* Dynamic vs. static typing
+* Protocols, categories and much, much more!
 
 ---
 
