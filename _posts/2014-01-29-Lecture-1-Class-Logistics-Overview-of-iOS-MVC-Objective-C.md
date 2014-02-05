@@ -3,7 +3,7 @@ layout: post
 title:  斯坦福 iOS7 公开课第一课：Class Logistics, Overview of iOS, MVC, Objective-C
 ---
 
-这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格便口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。
+这是 [Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14](https://itunes.apple.com/cn/course/developing-ios-7-apps-for/id733644550) 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格便口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。
 
 想要看到文章更好的排版效果，可直接浏览 GitHub 里的[文件](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-01-29-Lecture-1-Class-Logistics-Overview-of-iOS-MVC-Objective-C.md)。深受 md 格式解析不统一的害！！
 
