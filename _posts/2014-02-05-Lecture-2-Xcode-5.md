@@ -83,6 +83,16 @@ Okay, so that's it for the slides.
 The following slides are a walkthrough of the demonstration done in class. You will need this walkthrough to do your first homework assignment.
 
 This is the [Slides](https://github.com/JeOam/jeoam.github.io/blob/master/images/Lecture-2-Slides-Demonstration-of-Xcode5.pdf?raw=true).
+注意：上面链接的演示项目用到的材料可在这里找到：https://github.com/m2mtech/matchismo-2013-14
+关于 CS193P 的 Assignment Solutions 的资料，这里比较齐全：http://cs193p.m2m.at/ 
+
+Some Notes on the above Xcode 5 Demonstration Slides:
+
+* "Document Outline" shows you all the instances of objects in your view in a common outline form. So you can really easily find them and their relationships to each other.
+
+* It's a very important mechanism--Use Autoayout, which was introduced in iOS 6 and vastly improved in iOS 7, especially in Xcode--that allows when your user interface changes size, like it goes from being an iPhone 4 to an iPhone 5, or it rotates from being vertical to being horizontal, or it's on an iPad in a bigger sapce. For all the buttons and evertying to kind of move to a new position that makes sense or at least most of them. And then maybe you might have to move a few of them by hand. depending what's going on. But it automatically lays it out. And this is really important because I'm sure devices will continue tobe differing sizes as new devices come out over the years. The blue guidelines appeared on the Main.storyboard while dragging things, are the number one most important things for auto layout. But getting those blue guidelines, making sure you drop things with at least one blue guideline somewhere is really important to kind of get you going down the right path with the properly auto laid out UI.
+
+* While editing `Button`, we're editing an instance of a button, and we're actually editing live objects. They're essentially going to be freezed dried. And when your app runs, add water, they come to lifem, with their attributes set, and all the sizes and positions, and all their auto layout information in the object. In some systems you layout the button, you set the size, and you set the attributes. And then, you know, behind the scenes a bunch of code is being generated to create the button. That's not what we're doing here. So it's a little different than you might be used to some other systems.
 
 ---
 
