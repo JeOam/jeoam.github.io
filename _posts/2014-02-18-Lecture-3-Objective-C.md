@@ -5,7 +5,7 @@ title:  斯坦福 iOS7 公开课第三课：Objective-C
 
 这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格偏口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。
 
-本文图片较多，如果图片的注解足够清晰明了，就会省去文字记录，想要看到文章更好的排版效果，可直接浏览 GitHub 里的[文件](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-02-05-Lecture-2-Xcode-5.md)。
+想要看到文章更好的排版效果，可直接浏览 GitHub 里的[文件](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-02-18-Lecture-3-Objective-C.md)。
 
 ---
 
@@ -37,7 +37,7 @@ Some slides attached for review of first 3 lectures.
 
 * Page 23: Usually you pick a card then you pick another card, and if they match you get points, if they don't match they usually both turn back over.
 
-* Page 40: The differentiation between `designated initializer` and `convenience initializer` is: https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/MultipleInitializers.html.(If the link failed, read this [backup](https://gist.github.com/JeOam/9116926))
+* Page 40: The differentiation between `designated initializer` and `convenience initializer` is: [Read This](https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/MultipleInitializers.html).(If the link failed, read this [backup](https://gist.github.com/JeOam/9116926))
 
 ###[Lecture 3](https://raw.github.com/JeOam/jeoam.github.io/master/images/Lecture-3-Slides.pdf) 的内容基本上是讲解 Card Matching Game 的实际代码编写了，基本是 Slides 里面的内容，而且 Slides 做得超详细简明的，基本可以直接看 Slides 就可以了。而且 Lecture 3 开头提到的 Review 并没有在视频中看到，而 Slides 中也注明了。
 
