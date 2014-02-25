@@ -25,7 +25,7 @@ And we'll enhance our Controller and View to take advantage.
 Some slides attached for review of first 3 lectures.
 
 ###Continue Buliding Our Card Matching Game!
-#####Just follow Lecture 3 Slides of this courses(from page 2 to page 111).
+#####Just follow [Lecture 3 Slides](https://raw.github.com/JeOam/jeoam.github.io/master/images/Lecture-3-Slides.pdf) of this courses(from page 2 to page 111).
 
 * Page 7: In computer programming, lazy initialization is the tactic of delaying the creation of an object, the calculation of a value, or some other expensive process until the first time it is needed. (from [Wikipedia](http://en.wikipedia.org/wiki/Lazy_initialization))
 
@@ -39,7 +39,7 @@ Some slides attached for review of first 3 lectures.
 
 * Page 40: The differentiation between `designated initializer` and `convenience initializer` is: https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/MultipleInitializers.html.(If the link failed, read this [backup](https://gist.github.com/JeOam/9116926))
 
-###Lecture 3 的内容基本上是讲解 Card Matching Game 的实际代码编写了，基本是 Slides 里面的内容，而且 Slides 做得超详细简明的，基本可以直接看 Slides 就可以了。而且 Lecture 3 开头提到的 Review 并没有在视频中看到，而 Slides 中也注明了。
+###[Lecture 3](https://raw.github.com/JeOam/jeoam.github.io/master/images/Lecture-3-Slides.pdf) 的内容基本上是讲解 Card Matching Game 的实际代码编写了，基本是 Slides 里面的内容，而且 Slides 做得超详细简明的，基本可以直接看 Slides 就可以了。而且 Lecture 3 开头提到的 Review 并没有在视频中看到，而 Slides 中也注明了。
 
 ---
 
