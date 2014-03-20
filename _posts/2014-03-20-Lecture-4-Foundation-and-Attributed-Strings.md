@@ -3,7 +3,7 @@ layout: post
 title:  斯坦福 iOS7 公开课第四课：Foundation and Attributed Strings
 ---
 
-这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格偏口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。
+这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格偏口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。本文更好的排班效果可看[这里](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-02-25-Lecture-4-Foundation-and-Attributed-Strings.md)。
 
 ---
 
@@ -556,7 +556,7 @@ Colors are simple, Fonts, not to simple.
 
 Fonts in iOS 7 are very important to get right. A huge percentage of good iOS 7 UI design is picking the the right fronts, and using fonts in the right way, arranging fonts on screen in a nice way. Super important. So there's a lot of support in iOS 7 that's new that is basically about making it easy to do the right thing with fonts. So I put up some examples of some iOS 7 apps here. And you can see how front and center fonts are on all these things.
 
-![ios 7 ui font](fixme)
+![ios 7 ui font](https://raw.githubusercontent.com/JeOam/jeoam.github.io/master/images/Lecture-4-pic-1.png)
 
 So color, and background color, and the size of fonts, and all these things are all critically important in all of these applications. So we're going to talk a little bit about how to deal with this and what's in there for iOS 7 to make this happen. Unfortunately, I don't have enough time in lecture in general to go through all of this. I'll kind of distribute little bits of wisdom about it as we go through various UIs in lecture, and demos, and things like that. What I'm going to try and give you today is just the basis for how we present text on screen, okay? What the premitives are for that and how we do it in the right way so that we get consistency. 
 See, the one thing about all these apps -- do you see how the bold font, and the fonts you can click on, and the kind of little subheading fonts, they're all related fonts, same family -- maybe, maybe not. But they're related. They're the same sizes. The look the same. So all the apps kind of have a similar look, okay? That's because they're all using fonts properly.
@@ -691,6 +691,9 @@ Or call the NSMutableAttributedString method `- (NSMutableString *)mutableString
 ￼
 #####So what kind of attributes are there?
 One of the big ones is the font. So this is a dictionary.
+
+![lecture-4-pic-2](https://raw.githubusercontent.com/JeOam/jeoam.github.io/master/images/Lecture-4-pic-2.png)
+
 ```Objective-C
 UIColor *yellow = [UIColor yellowColor];
 UIColor *transparentYellow = [yellow colorWithAlphaComponent:0.3];
