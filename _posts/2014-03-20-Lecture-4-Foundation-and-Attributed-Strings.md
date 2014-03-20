@@ -3,7 +3,7 @@ layout: post
 title:  斯坦福 iOS7 公开课第四课：Foundation and Attributed Strings
 ---
 
-这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格偏口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。本文更好的排班效果可看[这里](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-02-25-Lecture-4-Foundation-and-Attributed-Strings.md)。
+这是 Stanford CS193p: Developing iOS 7 Apps for iPhone and iPad Fall 2013-14 文字版，按照视频字幕手工编辑完成。这里的内容由于是按照讲话的录音记录下来的，所以文字风格偏口语化，也比较"线性". 视频的内容大部分会记录成文字，但也酌情省略了可以忽略的语句。本文更好的排班效果可看[这里](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-03-20-Lecture-4-Foundation-and-Attributed-Strings.md)。
 
 ---
 
@@ -67,8 +67,8 @@ Unless the method has the word “`copy`” in it, if the object already exists,
 
 ---
 
-### 2. nil
-###Sending messages to nil is (mostly) okay. No code executed.
+###2. nil
+#####Sending messages to nil is (mostly) okay. No code executed.
 However, that message sending square bracket thing will return zero. If the method returns a value, it will return zero. Zero is also what nil is. So if you had a method that returned an object and you sent that message to nil, then you get back nil.
 
 int i = [obj methodWhichReturnsAnInt]; // i will be zero if obj is nil
@@ -363,6 +363,7 @@ for (NSString *string in myArray) { // no way for compiler to know what myArray 
 ```
 
 Example: NSArray of id 
+
 ```Objective-C
 NSArray *myArray = ...; 
 for (id obj in myArray) { // do something with obj, but make sure you don’t send it a message it does not respond to 
@@ -423,7 +424,7 @@ NSDictionary *colors = @{ @“green” : [UIColor greenColor],
                           @“red” : [UIColor redColor] };
 ```
 Lookup using “array like” notation ...
-```
+```Objective-C
 NSString *colorString = ...;
 UIColor *colorObject = colors[colorString]; // works the same as objectForKey: below
 ￼- (NSUInteger)count;
@@ -517,7 +518,7 @@ A property list, for it to be a property list, everything in the entire object g
 #####NSRange
 #####C struct (not a class), Used to specify subranges inside strings and arrays (et. al.).
 The last thing really I'm going to talk about that's kind of in the core part of Foundation is `NSRange`, which is just a C struct. It's exactly what you think: It describes a range. This might be a range in a string or it could be a range in an array. It's basically a starting location, that's the NSUInteger location and a length -- how many characters or how many items in the array?
-```Objective-C
+```c
 typedef struct {
     NSUInteger location;
     NSUInteger length;
@@ -550,6 +551,8 @@ So alpha, which in computer graphics is how transparent it is -- one being fully
 
 A handful of “standard” colors have class methods (e.g. `[UIColor greenColor]`). 
 A few “system” colors also have class methods (e.g. `[UIColor lightTextColor]`, which is the shade of gray for light text, disable text, or whatever.).
+
+---
 
 ###12. Fonts
 Colors are simple, Fonts, not to simple.
@@ -646,7 +649,7 @@ Think of it as an NSString where each character has an NSDictionary of “attrib
 
 It's immutable,not modifiable. So you cannot set the attributes of an NSAttributedString. There is a mutable sttributed string, we'll talk about that in a second.
 
-###Getting Attributes
+#####Getting Attributes
 You can ask an NSAttributedString all about the attributes at a given location in the string. 
 ```Objective-C
 - (NSDictionary *)attributesAtIndex:(NSUInteger)index
@@ -742,7 +745,7 @@ But it also has a property to set/get its text using an NSAttributedString ...
 @property (nonatomic, strong) NSAttributedString *attributedText;
 ```
 
-###Note that this attributed string is not mutable
+#####Note that this attributed string is not mutable
 So, to modify what is in a UILabel, you must make a mutableCopy, modify it, then set it back. 
 ```Objective-C
 NSMutableAttributedString *labelText = [myLabel.attributedText mutableCopy]; 
