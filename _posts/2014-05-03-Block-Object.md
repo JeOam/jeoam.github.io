@@ -3,7 +3,7 @@ layout: post
 title: Constructing Block Objects
 ---
 
-a. Example block object defined as function：
+* Example block object defined as function：
 
 ```Objective-C
 NSString* (^intToString)(NSUInteger) = ^(NSUInteger paramInteger){
@@ -13,13 +13,13 @@ NSString* (^intToString)(NSUInteger) = ^(NSUInteger paramInteger){
 };
 ```
 
-b. `typedef` the signature of block object:
+* `typedef` the signature of block object:
 
 ```Objective-C
 typedef NSString* (^IntToStringConverter)(NSUInteger paramInteger);
 ```
 
-c. define a Objective-C method that accepts both an integer and a block object of type:
+* Define a Objective-C method that accepts both an integer and a block object of type:
 
 ```Objective-C
 - (NSString *) convertIntToString:(NSUInteger)paramInteger usingBlockObject:(IntToStringConverter)paramBlockObject{
@@ -27,7 +27,7 @@ c. define a Objective-C method that accepts both an integer and a block object o
     return paramBlockObject(paramInteger); }
 ```
 
-d. Calling the block object in another method:
+* Calling the block object in another method:
 
 ```Objective-C
 - (void) doTheConversion{
@@ -37,7 +37,7 @@ d. Calling the block object in another method:
 }
 ```
 
-e. Example block object defined as a function:
+* Example block object defined as a function:
 
 ```Objective-C
 - (void) doTheConversion{
@@ -51,7 +51,7 @@ e. Example block object defined as a function:
 }
 ```
 
-f. construct a block object while passing it as a parameter:
+* Construct a block object while passing it as a parameter:
 
 ```Objective-C
 - (void) doTheConversion{
