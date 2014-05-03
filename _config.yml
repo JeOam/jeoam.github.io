@@ -1,6 +1,6 @@
 safe: true
 lsi: false
 pygments: true
-markdown: rdiscount
+markdown: maruku
 redcarpet:
   extensions: [fenced_code_blocks]
