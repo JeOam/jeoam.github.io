@@ -3,6 +3,7 @@ layout: post
 title: UITextView 隐藏键盘
 ---
 
+
 在 `viewDidLoad` 方法中：
 
 ```Objective-C
@@ -31,4 +32,4 @@ title: UITextView 隐藏键盘
 ```
 
 效果图：
-![](https://github.com/JeOam/jeoam.github.io/blob/9483f32c6b660e86028da07b0dc06cc10efda52b/images/2014-05-10.png)
+![](https://raw.githubusercontent.com/JeOam/jeoam.github.io/9483f32c6b660e86028da07b0dc06cc10efda52b/images/2014-05-10.png)
