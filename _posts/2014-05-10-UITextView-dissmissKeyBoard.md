@@ -6,7 +6,7 @@ title: UITextView 隐藏键盘
 
 在 `viewDidLoad` 方法中：
 
-```Objective-C
+```objectivec
     // 在输入框加一个 Done 按钮退出键盘
     UIToolbar *topView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
 
@@ -25,7 +25,7 @@ title: UITextView 隐藏键盘
 
 `dismissKeyBoard` 方法：
 
-```Objective-C
+```objectivec
 -(void)dismissKeyBoard{
     [self.textView resignFirstResponder];
 }
