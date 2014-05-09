@@ -99,21 +99,21 @@ What if I send a message to an object and it doesn't understand it? Well, nothin
 
 #####Static typing.
 So you know about static typing:
-```Objective-C
+```objectivec
 NSString *s = @“x”; // "statically" typed(compiler will warn if s is sent non-NSString messages).
 ```
 This really safe, really good, nothing bad's going to happen here because the compiler at compile time has a pretty good idea what you intend and it will warn you if not. However, the compiler is not doing the binding between what does executes at this time; it just warning you. It's syntactic sugar. It's syntax that it can look at to warn you, but it's not actually enforcing anything here. It's perfectly legal:
-```Objective-C
+```objectivec
 id obj = s;
 ```
 `s` is the line before. And that will not even generate a warning. Because `id obj` is a pointer to any kind of object; `s` is pointer to any kind of object. It's a pointer to a string, according to the previous line. But since those are both pointers to objects, that's perfectly legal. Compiler will not warn you. This is a little bit of a dangerous line of code ,right? Because you just went from having `s` -- this nice variable that's typed and the compiler can warn you if you do the wrong thing -- to have an `obj`, which is this untyped pointer where you can send any message you want and the compiler's not going to warn you. You can also do this:
-```Objective-C
+```objectivec
 NSArray *a = obj;
 ```
 Okay, now you have NSArray variable that points to a string. Now, that's extremely likely to cause to problem, okay? This is also legal because `NSArray *a` is a pointer to an object, `obj` is a pointer to an object, so it allows this assignment. Very dangerous. Obviously wrong. So `id` can be dangerous in this way.
 
 And in fact, in the code that we've written we already did this kind of silently. Remember that in playing cards match we put a line in there:
-```Objective-C
+```objectivec
 - (int)match:(NSArray *)otherCards
 {
     ...
@@ -127,7 +127,7 @@ Well, the method first object in an NSArray returns an `id` -- if you go look it
 
 ###4. Object Typing
 So to summarize all this I'm going to show you this example. I've got two classes, I got a vehicle class, which has what method move -- you can move the vehicle around -- and I got a ship which is a vehicle, inherits from vehicle, and it's only got one method, shoot. So this ship can shoot other ships. And they also move because they're vehicles. 
-```Objective-C
+```objectivec
 ￼@interface Vehicle
 - (void)move;
 @end
@@ -135,7 +135,7 @@ So to summarize all this I'm going to show you this example. I've got two classe
 - (void)shoot;
 @end
 ```
-```Objective-C
+```objectivec
 Ship *s = [[Ship alloc] init];
 [s shoot];
 [s move];    //No compiler warning. Perfectly legal since s “isa” Vehicle. Normal object-oriented stuff here.
@@ -175,7 +175,7 @@ However, we need to protect ourselves, and there's two big ways that we protect 
 
 #####Protocols
 And then Another way is called `protocols`. 
-```Objective-C
+```objectivec
 id <UIScrollViewDelegate> scrollViewDelegate;
 ```
 And protocols is a way using little angle brackets after an `id` to say, "This is an `id`, a pointer to some class I don't know what it it, but it responds to this set of methods that I'm going to define with this little angle bracket thing like UI scroll view delegate. " And that's how we do the delegation and data source thing. So we're not going to talk about protocols today because you don't quite need them. We'll probably talk about them next week or the week after. But that's another way we protect ourselves against `id`. An `id` with angle brackets is kind of in between pure `id` and static typing. It's kind of in the middle. Instead of static typing the type, we're just static typing the messages that the thing can respond to.
@@ -199,7 +199,7 @@ So the arguments unfortunately to these methods are really kind of wonky. And ju
 So the argument `isKindOfClass:` you get by sending the class method `class` to the class, which will give you a capital C `Class`, which is the argument to the `isKindOfClass:` method. Okay? So there's this method class. You see it there: 
 
 #####Class testing methods take a Class
-```Objective-C 
+```objectivec 
 if ([obj isKindOfClass:[NSString class]]) {
 ￼￼￼    NSString *s = [(NSString *)obj stringByAppendingString:@”xyzzy”];
 }
@@ -211,7 +211,7 @@ Once I see that an object kind of a class, then I might want to cast it. You see
 #####Method testing methods take a selector (SEL) 
 How about the selector one, the method one rather. Okay, so methods, when we use them in this response to selector thing, we call them "selectors". A seletor is really kind of an identifier for a method name, because if you have the method `shoot`, it's the same selector no matter what class you're talking about implementing it in. Even if they don't inherit from each other, they're completely unrelated. You might have a gun class that says shoot and you mignt have a ship class that says shoot -- the selector shoot would be the same. Special `@selector()` directive turns the name of a method into a selector. And we get that selector by saying:
 
-```Objective-C
+```objectivec
 if ([obj respondsToSelector:@selector(shoot)]) {
     [obj shoot];
 } else if ([obj respondsToSelector:@selector(shootAt:)]) {
@@ -221,7 +221,7 @@ if ([obj respondsToSelector:@selector(shoot)]) {
 
 #####SEL is the Objective-C “type” for a selector
 These selector, there's actually a type, kind of a type `def` in Objective-C for these selectors. All caps(大写) `SEL`, kind of like all caps BOOL, right? So this type `def` thing is added. And you can declare variables that are type `SEL` and store things in there. 
-```Objective-C
+```objectivec
 SEL shootSelector = @selector(shoot);
 SEL shootAtSelector = @selector(shootAt:);
 SEL moveToSelector = @selector(moveTo:withPenColor:);
@@ -229,19 +229,19 @@ SEL moveToSelector = @selector(moveTo:withPenColor:);
 #####If you have a SEL, you can also ask an object to perform it ...
 And there are actually other methods besides respond to selector that take a selector. For example, 
 using the `performSelector:` or `performSelector:withObject:` methods in NSObject. They will perform that method on another object. Now, why would you ever want to do this? Well, you might have some parameterized thing where you're going to do one of three different methods, depending on something the user chooses. And you can say perform selector and then have three SEL variables, one for each method, and pass that as the argument you want to perform selected.
-```Objective-C
+```objectivec
 [obj performSelector:shootSelector];
 [obj performSelector:shootAtSelector withObject:coordinate];
 ```
 #####Using makeObjectsPerformSelector: methods in NSArray
 You can also do cool thing like ask an array make all the objects in yourself perform this selector. This is a very cool method. And if you get used to using methods like this in Array, you'll find your code will shrink down really small because, you know, for ins and things like you have to really zoomed down to one-liners, make object perform selector, okay, or make object perform selector with object. So that's an NSArray thing.
-```Objective-C
+```objectivec
 [array makeObjectsPerformSelector:shootSelector]; // cool, huh?
 [array makeObjectsPerformSelector:shootAtSelector withObject:target]; // target is an id
 ```
 And of course, we do target action with selectors. The method, if you wanted to set up target action, not doing control drag but actually setting up in code, is in UI control actually, which button inheritance from:
 In UIButton, `- (void)addTarget:(id)anObject action:(SEL)action ...;`, it says what message to send to what object, what's the target, what's the action?
-```Objective-C
+```objectivec
 `[button addTarget:self action:@selector(digitPressed:) ...];`
 ```
 
@@ -249,7 +249,7 @@ In UIButton, `- (void)addTarget:(id)anObject action:(SEL)action ...;`, it says w
 
 ###7. Demo
 All right. So let's take a look at how match -- the playing card match -- might be improved with introspection. So I'm going to go here back to Xcode. Okay, let's open `Matchismo.xcodeproj` and go down to `PlayingCard.h` and its Counterparts. Look at the `match:` method:
-```Objective-C
+```objectivec
 -(int) match:(NSArray *)otherCards
 {
     int score = 0;
@@ -267,7 +267,7 @@ All right. So let's take a look at how match -- the playing card match -- might 
 }
 ```
 And here's the line of code that's a little bit of trouble. Because the first object here returns an `id`. So what we could do here, for example:
-```Objective-C
+```objectivec
 -(int) match:(NSArray *)otherCards
 {
     int score = 0;
@@ -319,7 +319,7 @@ You usually create an NSArray by sometimes calling a class method or even alloc 
 
 Sometimes we'll create arrays by asking other arrays to add an object to themselves and give us a new array since they can't be mutated; they have to make a new one and give it back.
 You already know these key methods ...
-```Objective-C
+```objectivec
 - (NSUInteger)count;
 - (id)objectAtIndex:(NSUInteger)index; // crashes if index is out of bounds; returns id! 
 - (id)lastObject; // returns nil (doesn’t crash) if there are no objects in the array
@@ -327,7 +327,7 @@ You already know these key methods ...
 ```
 
 But there are a lot of very interesting methods in this class. You really should familiaize yourself with this class. We talked about make objects perform.
-```Objective-C
+```objectivec
 - (NSArray *)sortedArrayUsingSelector:(SEL)aSelector; // [1]
 - (void)makeObjectsPerformSelector:(SEL)aSelector withObject:(id)selectorArgument;
 - (NSString *)componentsJoinedByString:(NSString *)separator;
@@ -355,7 +355,8 @@ And you know that it implements these key methods as well ...
 Looping through members of an array in an efficient manner
 Language support using `for-in`.
 Example: NSArray of NSString objects
-```Objective-C
+
+```objectivec
 NSArray *myArray = ...;
 for (NSString *string in myArray) { // no way for compiler to know what myArray contains, and that's essentially your casting, okay? Your casting, whatever comes out of that array to be an NSString.
     double value = [string doubleValue]; // crash here if string is not an NSString 
@@ -364,7 +365,7 @@ for (NSString *string in myArray) { // no way for compiler to know what myArray 
 
 Example: NSArray of id 
 
-```Objective-C
+```objectivec
 NSArray *myArray = ...; 
 for (id obj in myArray) { // do something with obj, but make sure you don’t send it a message it does not respond to 
     if ([obj isKindOfClass:[NSString class]]) {
@@ -375,14 +376,16 @@ for (id obj in myArray) { // do something with obj, but make sure you don’t se
 
 #####NSNumber
 Object wrapper around primitive types like int, float, double, BOOL, enums, etc. And why do you want to wrap them? Usually because you want to put them in Array or a dictionary, okay? So you can't put an `int` into an array; you need to have an NSNumber object.
-```Objective-C
+
+```objectivec
 NSNumber *n = [NSNumber numberWithInt:36];
 float f = [n floatValue]; // would return 36.0 as a float (i.e. will convert types)
 ```
 Useful when you want to put these primitive types in a collection (e.g. NSArray or NSDictionary).
 
 New syntax for creating an NSNumber in iOS 6: `@()`
-```Objective-C
+
+```objectivec
 NSNumber *three = @3;
 NSNumber *underline = @(NSUnderlineStyleSingle); // enum
 NSNumber *match = @([card match:@[otherCard]]); // expression that returns a primitive type
@@ -418,13 +421,16 @@ Immutable collection of objects looked up by a key (simple hash table).
 All keys and values are held onto `strong`ly by an NSDictionary. So if they're in there as a key or a value, then they're in the heap. And they stay in there as long as the dictionary stays in the heap. The keys and values obviously, are both objects.
 
 Can create with this syntax: `@{ key1 : value1, key2 : value2, key3 : value3 }` 
-```Objective-C
+
+```objectivec
 NSDictionary *colors = @{ @“green” : [UIColor greenColor],
                           @“blue” : [UIColor blueColor],
                           @“red” : [UIColor redColor] };
 ```
+
 Lookup using “array like” notation ...
-```Objective-C
+
+```objectivec
 NSString *colorString = ...;
 UIColor *colorObject = colors[colorString]; // works the same as objectForKey: below
 ￼- (NSUInteger)count;
@@ -440,7 +446,8 @@ Mutable version of NSDictionary.
 
 Create using `alloc`/`init` or one of the `+ (id)dictionary`... class methods.
 In addition to all the methods inherited from NSDictionary, here are some important methods ... 
-```Objective-C
+
+```objectivec
 - (void)setObject:(id)anObject forKey:(id)key;
 - (void)removeObjectForKey:(id)key;
 - (void)removeAllObjects;
@@ -449,7 +456,8 @@ In addition to all the methods inherited from NSDictionary, here are some import
 
 #####Looping through the keys or values of a dictionary
 Example:
-```Objective-C
+
+```objectivec
     NSDictionary *myDictionary = ...;
     for (id key in myDictionary) {
         // do something with key here
@@ -482,7 +490,8 @@ An NSArray of NSDictionarys whose keys are NSStrings and values are NSNumbers is
 Because there's a bunch of API throughout iOS that you're going to see that takes a property list as the argument. But property list is only phrase we define, so it's probably going to take an `id`. It might take an NSArray or an NSDictionary, depending on the API. But it's basically saying in its documentation, "The argument to this is a property list."
 
 Usually to read them from somewhere or write them out to somewhere. Example:
-```Objective-C
+
+```objectivec
 - (void)writeToFile:(NSString *)path atomically:(BOOL)atom;
 ```
 This can (only) be sent to an NSArray or NSDictionary that contains only Property List objects.
@@ -497,22 +506,28 @@ Everything that's stored in an NSUserDefault database has to be a property list.
 Lightweight storage of Property Lists. Not a full-on database, so only store small things like user preferences.
 
 Read and write via a shared instance obtained via class method `standardUserDefaults` ... 
-```Objective-C
+
+```objectivec
 [[NSUserDefaults standardUserDefaults] setArray:rvArray forKey:@“RecentlyViewed”]; 
 ```
+
 That will give you an instance that is shared across your entire application. It's like a global. Okay? There's only on of these things.
 
 Sample methods:
-```Objective-C
+
+```objectivec
 - (void)setDouble:(double)aDouble forKey:(NSString *)key;
 - (NSInteger)integerForKey:(NSString *)key; // NSInteger is a typedef to 32 or 64 bit int 
 - (void)setObject:(id)obj forKey:(NSString *)key; // obj must be a Property List
 - (NSArray *)arrayForKey:(NSString *)key; // will return nil if value for key is not NSArray
 ```
+
 #####Always remember to write the defaults out after each batch of changes!
-```Objective-C
+
+```objectivec
 [[NSUserDefaults standardUserDefaults] synchronize];
 ```
+
 A property list, for it to be a property list, everything in the entire object graph has to a property list.
 
 #####NSRange
@@ -527,7 +542,7 @@ typedef struct {
 
 #####Important location value NSNotFound.
 There's an important constant called `NSNotFound`. NSNotFound is the value of location in a range that was not found or that is otherwise invalid. Okay, so it's, like, seartch for a substring in a string and it couldn't find it, you're going to get range back that the location is going to be NSNotFound.
-```Objective-C
+```objectivec
 NSString *greeting = @“hello world”; 
 NSString *hi = @“hi”;
 NSRange r = [greeting rangeOfString:hi]; // finds range of hi characters inside greeting 
@@ -566,7 +581,7 @@ See, the one thing about all these apps -- do you see how the bold font, and the
 
 #####UIFont
 So let's talk about fonts. The most important thing to understand about fonts is that if you're displaying user content -- okay, that the user's information. So in the calendar that's the appointments, and the days of the weeks, and the month, and all those things. In the weather it's the temperature, and the name of the city, and things like that. In the timer app it's the city the clocks is in. So if it's user content -- in others words, it's not the text on a button, okay? Then you want to use a preferred font, what's called a "preferred font." And so you want this incredibly important method. If you only learn one method in all of UI font, it's this iOS 7 method: `preferredFontForTextStyle:`
-```Objective-C
+```objectivec
 UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 ```
 The text style argument is a string. You use a constant that you're going to look up in UI font descriptor, actually. If you go through UI font, you can link click through and find it. And so there's the body style. So that's the text that's in the body, the main part of what's being displayed. So like, in an appointment that would be -- like in a calenedar item that would be the actual information about what's going to happen at that appointment.
@@ -574,7 +589,7 @@ The text style argument is a string. You use a constant that you're going to loo
 Some other styles (see `UIFontDescriptor` documentation for even more styles) . `UIFontTextStyleHeadline`, `UIFontTextStyleCaption1`, `UIFontTextStyleFootnote`, etc. There's about, I think, eight or so of these. And you should familiarize yourself with what circumstances semantically those things should be used in. And then when you want a font in your app, you should be using one of these. Okay? For user content. 
 
 There are also “system” fonts. These are what goes on buttons. They are used in places like button titles.
-```Objective-C
+```objectivec
 + (UIFont *)systemFontOfSize:(CGFloat)pointSize;
 + (UIFont *)boldSystemFontOfSize:(CGFloat)pointSize; 
 ```
@@ -595,13 +610,13 @@ Understand that a best match for a “bold” font may not be bold if there’s 
 
 #####UIFontDescriptor(Did not mention in the lecture, but in slides)
 You can get a font descriptor from an existing UIFont with this UIFont method:
-```Objective-C
+```objectivec
 - (UIFontDescriptor *)fontDescriptor;
 ```
 You might well have gotten the original UIFont using `preferredFontForTextStyle:`.
 
 Then you might modify it to create a new descriptor with methods in `UIFontDescriptor` like:
-```Objective-C
+```objectivec
 - (UIFontDescriptor *)fontDescriptorByAddingAttributes:(NSDictionary *)attributes;
 ```
 (the attributes and their values can be found in the class reference page for UIFontDescriptor) You can also create a UIFontDescriptor directly from attributes (though this is rare) using :
@@ -610,7 +625,7 @@ Then you might modify it to create a new descriptor with methods in `UIFontDescr
 ```
 #####Symbolic Traits
 Italic, Bold, Condensed, etc., are important enough to get their own API in UIFontDescriptor:
-```Objective-C
+```objectivec
 - (UIFontDescriptorSymbolicTraits)symbolicTraits;
 - (UIFontDescriptor *)fontDescriptorWithSymbolicTraits:(UIFontDescriptorSymbolicTraits)traits;
 ```
@@ -618,7 +633,7 @@ Some example traits (again, see UIFontDescriptor documentation for more):
 `UIFontDescriptorTraitItalic`, `UIFontDescriptorTraitBold`, `UIFontDescriptorTraitCondensed`, etc.
 
 Once you have a `UIFontDescriptor` that describes the font you want, use this `UIFont` method: 
-```Objective-C
+```objectivec
 + (UIFont *)fontWithDescriptor:(UIFontDescriptor *)descriptor size:(CGFloat)size; 
 ```
 (specify size of 0 if you want to use whatever size is in the descriptor)
@@ -626,7 +641,7 @@ You will get a “best match” for your descriptor given available fonts and th
 
 #####Example
 Let’s try to get a “bold body font”:
-```Objective-C
+```objectivec
 UIFont *bodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 UIFontDescriptor *existingDescriptor = [bodyFont fontDescriptor];
 UIFontDescriptorSymbolicTraits traits = existingDescriptor.symbolicTraits;
@@ -651,7 +666,7 @@ It's immutable,not modifiable. So you cannot set the attributes of an NSAttribut
 
 #####Getting Attributes
 You can ask an NSAttributedString all about the attributes at a given location in the string. 
-```Objective-C
+```objectivec
 - (NSDictionary *)attributesAtIndex:(NSUInteger)index
                      effectiveRange:(NSRangePointer)range;
 ```
@@ -660,13 +675,13 @@ The range is returned and it lets you know for how many characters the attribute
 #####NSAttributedString is not an NSString
 It does not inherit from NSString, so you cannot use NSString methods on it.
 If you need to operate on the characters, there is this great method in NSAttributedString ... 
-```Objective-C
+```objectivec
 - (NSString *)string;
 ```
 This will return an NSString that you can then search in or do all the string things you want.
 
 For example, to find a substring in an NSAttributedString, you could do this ... 
-```Objective-C
+```objectivec
 NSAttributedString *attributedString = ...;
 NSString *substring = ...;
 NSRange r = [[attributedString string] rangeOfString:substring];
@@ -678,15 +693,15 @@ Unlike NSString, we almost always use mutable attributed strings. It inherit fro
 
 ####Adding or setting attributes on the characters
 You can add an attribute to a range of characters ...
-```Objective-C
+```objectivec
 - (void)addAttributes:(NSDictionary *)attributes range:(NSRange)range;
 ```
 which will change the values of attributes in attributes and not touch other attributes. Or you can set the attributes in a range:
-```Objective-C
+```objectivec
 - (void)setAttributes:(NSDictionary *)attributes range:(NSRange)range;
 ```
 which will remove all other attributes in that range in favor of the passed attributes. You can also remove a specific attribute from a range:
-```Objective-C
+```objectivec
 - (void)removeAttribute:(NSString *)attributeName range:(NSRange)range;
 ```
 Modifying the contents of the string (changing the characters) You can do that with methods to append, insert, delete or replace characters.
@@ -697,7 +712,7 @@ One of the big ones is the font. So this is a dictionary.
 
 ![lecture-4-pic-2](https://raw.githubusercontent.com/JeOam/jeoam.github.io/master/images/Lecture-4-pic-2.png)
 
-```Objective-C
+```objectivec
 UIColor *yellow = [UIColor yellowColor];
 UIColor *transparentYellow = [yellow colorWithAlphaComponent:0.3];
  @{ NSFontAttributeName :
@@ -730,7 +745,7 @@ Attributed strings on buttons will be extremely use for your homework.
 
 #####Drawing strings directly on screen
 Next week we’ll see how to draw things directly on screen. NSAttributedStrings know how to draw themselves on screen, for example ... 
-```Objective-C
+```objectivec
 - (void)drawInRect:(CGRect)aRect;
 ```
 Don’t worry about this too much for now. Wait until next week.
@@ -741,13 +756,13 @@ Don’t worry about this too much for now. Wait until next week.
 UILabel has a property, it's an NSAttributedString called "attributed text." It's just like the text label, which is an NSString, which we've already used in this class.
 You have been setting its contents using the NSString property text.
 But it also has a property to set/get its text using an NSAttributedString ... 
-```Objective-C
+```objectivec
 @property (nonatomic, strong) NSAttributedString *attributedText;
 ```
 
 #####Note that this attributed string is not mutable
 So, to modify what is in a UILabel, you must make a mutableCopy, modify it, then set it back. 
-```Objective-C
+```objectivec
 NSMutableAttributedString *labelText = [myLabel.attributedText mutableCopy]; 
 [labelText setAttributes:...];
 myLabel.attributedText = labelText;
