@@ -26,9 +26,7 @@ title: UITextView 隐藏键盘
 
 ```Objective-C
 -(void)dismissKeyBoard{
-
     [self.textView resignFirstResponder];
-
 }
 ```
 
