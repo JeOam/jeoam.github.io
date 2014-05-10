@@ -3,6 +3,7 @@ layout: post
 title: UITextView 隐藏键盘
 ---
 
+本文原本的排版效果：[这里](https://github.com/JeOam/jeoam.github.io/blob/master/_posts/2014-05-10-UITextView-dissmissKeyBoard.md)
 
 在 `viewDidLoad` 方法中：
 
