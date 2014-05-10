@@ -7,21 +7,19 @@ title: UITextView 隐藏键盘
 在 `viewDidLoad` 方法中：
 
 ```objectivec
+// 在输入框加一个 Done 按钮退出键盘
+UIToolbar *topView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
 
-    // 在输入框加一个 Done 按钮退出键盘
-    UIToolbar *topView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+// 这里缺少 Button1，Button2 的话，doneButton 按钮会被放到 toolbar 的左边
+UIBarButtonItem *Button1 = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:nil];
 
-    
-    // 这里缺少 Button1，Button2 的话，doneButton 按钮会被放到 toolbar 的左边
-    UIBarButtonItem *Button1 = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:nil];
+UIBarButtonItem *Button2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
 
-    UIBarButtonItem *Button2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyBoard)];
 
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyBoard)];
+[topView setItems:@[Button1,Button2,doneButton]];
 
-    [topView setItems:@[Button1,Button2,doneButton]];
-
-    [self.textView setInputAccessoryView:topView];
+[self.textView setInputAccessoryView:topView];
     
 ```
 
