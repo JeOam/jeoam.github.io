@@ -4,4 +4,4 @@ title: iOS Note Navigation
 ---
 
 iOS Note Navigation
-{% gist 790799bbdcf19c6f031b %}
+<script src="https://gist.github.com/benbalter/5555251.js"></script>
